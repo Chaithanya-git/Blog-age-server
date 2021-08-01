@@ -48,19 +48,6 @@ let setRouter = (app) => {
     auth.isAuthenticated,
     blogController.increaseBlogView
   )
-
-  //comment routes
-
-  app.get(
-    baseUrl + "/all/comments",
-    auth.isAuthenticated,
-    blogController.getAllComments
-  )
-  app.post(
-    baseUrl + "/create/comments",
-    auth.isAuthenticated,
-    blogController.createComment
-  )
 }
 
 module.exports = {

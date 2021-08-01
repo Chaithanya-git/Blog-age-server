@@ -2,7 +2,7 @@ let appconfig={};
 
 appconfig.port = 3000;
 appconfig.allowedCorsOrigin = "*";
-appconfig.env = "dev";
+appconfig.env = 'dev';
 appconfig.db = {
     uri: 'mongodb://127.0.0.1/root?authSource=root --username chaithanya/blogAppDb', 
 }
@@ -15,5 +15,6 @@ module.exports= {
     db:appconfig.db,
     apiVersion:appconfig.apiVersion
 }
+
 
 
