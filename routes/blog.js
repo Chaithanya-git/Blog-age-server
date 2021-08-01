@@ -48,7 +48,7 @@ let setRouter = (app) => {
     auth.isAuthenticated,
     blogController.increaseBlogView
   )
-
+  console.log(app)
   //comment routes
 
   app.get(
