@@ -10,7 +10,7 @@ let app = express()
 
 let setRouter = (app) => {
   let baseUrl = appconfig.apiVersion + "/blogs"
-
+  //all the routes
   app.get(baseUrl + "/all", auth.isAuthenticated, blogController.getAllBlog)
   app.get(
     baseUrl + "/view/:blogId",
@@ -47,19 +47,6 @@ let setRouter = (app) => {
     baseUrl + "/:blogId/count/view",
     auth.isAuthenticated,
     blogController.increaseBlogView
-  )
-  console.log(app)
-  //comment routes
-
-  app.get(
-    baseUrl + "/all/comments",
-    auth.isAuthenticated,
-    blogController.getAllComments
-  )
-  app.post(
-    baseUrl + "/create/comments",
-    auth.isAuthenticated,
-    blogController.createComment
   )
 }
 
